@@ -10,10 +10,11 @@
 
 @interface KVIAlertView : UIAlertView
 
-@property (nonatomic, copy) NSString *cancelButtonTitle;
-@property (nonatomic, copy) void (^cancelButtonAction)();
+@property (nonatomic, copy, nullable) NSString *cancelButtonTitle;
+@property (nonatomic, copy, nullable) void (^cancelButtonAction)();
 
-- (void)addButtonWithTitle:(NSString *)title action:(void (^)())buttonAction;
-- (void)addCancelButtonWithTitle:(NSString *)title action:(void (^)())buttonAction;
+- (void)addButtonWithTitle:(nonnull NSString *)title action:(nonnull void (^)())buttonAction;
+
+- (void)addCancelButtonWithTitle:(nonnull NSString *)title action:(nonnull void (^)())buttonAction;
 
 @end
